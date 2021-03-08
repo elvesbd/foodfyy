@@ -1,0 +1,70 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block content %}
+  <section class="content">
+    <div class="title">
+      <h3>Gerenciar Receitas</h3>
+      <a href="/admin/recipes/create" class="button"> + Criar Receita</a>
+    </div>
+
+    <section class="recipesCard">
+      
+        <div class="recipeCard" id="{{ recipe.id }}">
+          <div class="recipeCardImg">
+            <div>
+              <img src="/assets/pizza.png" alt="{{ recipe.title }}">
+            </div>
+          </div>
+          
+          <div class="recipeCardContent">
+            <div class="recipeTitleCard">
+              <span>title{{ recipe.title }}</span>
+            </div>
+            <div class="recipeAuthorCard">
+              <span>por {{recipe.author }}</span>
+            </div>
+            <a href="/admin/recipes/{{ recipe.id }}">Vizualizar</a>
+          </div>
+        </div>
+
+        <div class="recipeCard" id="{{ recipe.id }}">
+          <div class="recipeCardImg">
+            <div>
+              <img src="/assets/pizza.png" alt="{{ recipe.title }}">
+            </div>
+          </div>
+          
+          <div class="recipeCardContent">
+            <div class="recipeTitleCard">
+              <span>title{{ recipe.title }}</span>
+            </div>
+            <div class="recipeAuthorCard">
+              <span>por {{recipe.author }}</span>
+            </div>
+            <a href="/admin/recipes/{{ recipe.id }}">Vizualizar</a>
+          </div>
+        </div>
+
+        <div class="recipeCard" id="{{ recipe.id }}">
+          <div class="recipeCardImg">
+            <div>
+              <img src="/assets/pizza.png" alt="{{ recipe.title }}">
+            </div>
+          </div>
+          
+          <div class="recipeCardContent">
+            <div class="recipeTitleCard">
+              <span>title{{ recipe.title }}</span>
+            </div>
+            <div class="recipeAuthorCard">
+              <span>por {{recipe.author }}</span>
+            </div>
+            <a href="/admin/recipes/{{ recipe.id }}">Vizualizar</a>
+          </div>
+        </div>
+      
+    </section>
+  </section>
+
+  
+{% endblock %}

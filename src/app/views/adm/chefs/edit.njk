@@ -1,0 +1,30 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block content %}
+    <section class="content">
+      <div class="titleEdit">
+        <h3>Editando Chef</h3>
+        <button type="submit" class="buttonDelete" form="form-delete">Deletar Chef</button>
+        <button type="submit" class="buttonSave" form="form-save">Salvar Chef</button>
+      </div>
+
+      <form id="form-save" class="createRecipe" method="POST" action="/admin/chefs?_method=PUT">
+        <input type="hidden" name="id" value="{{chef.id}}">
+        {% include 'adm/chefs/fields.njk' %}
+      </form>
+
+      <form id="form-delete" class="createRecipe" method="POST" action="/admin/chefs?_method=DELETE">
+        <input type="hidden" name="id" value="{{chefe.id}}">
+      </form> 
+    </section>
+
+    <script>
+      const formDelete = document.querySelector('#form-delete');
+      formDelete.addEventListener('submit', (event) => {
+        const confirmation = confirm('Deseja deletar o chefe');
+        if (!confirmation) {
+          event.preventDefault(); 
+        }
+      });
+    </script>
+{% endblock %}

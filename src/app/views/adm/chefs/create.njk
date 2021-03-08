@@ -1,0 +1,14 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block content %}
+  <section class="content">
+    <form class="createRecipe" method="POST" action="/admin/recipes">
+      <div class="title">
+        <h3>Criando Chefe</h3>
+        <button class="buttonSave" type="submit">Salvar Chef</button>
+      </div>
+
+      {% include 'adm/chefs/fields.njk' %}
+    </form>
+  </section>
+{% endblock %}

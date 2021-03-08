@@ -1,0 +1,88 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block content %}
+  <section class="content">
+        <div class="recipeId" id="{{recipe.id}}">
+          <section class="contentDetail">
+            <div class="title">
+              <h3>Chef: {{chef.name}}</h3>
+              <a href="/admin/chefs/{{chef.id}}/edit" class="button"> Editar Chef</a>
+            </div>
+          </section>
+          <div class="recipeImage">
+            <img class="imageDetail" src="/assets/doce.png" alt="{{chef.name}}">
+          </div>
+          <div class="recipeTitleId">
+            <span>teste{{recipe.title}}</span>
+          </div>
+          <div class="recipeAuthorId">
+            <span>por {{chef.name}}</span>
+          </div>
+        </div>
+
+        <div class="details-info">
+            <div class="detailsMenu">
+              <h2>Receitas</h2>
+            </div>
+            <section class="recipesCard">
+      
+        <div class="recipeCard" id="{{ recipe.id }}">
+          <div class="recipeCardImg">
+            <div>
+              <img src="/assets/pizza.png" alt="{{ recipe.title }}">
+            </div>
+          </div>
+          
+          <div class="recipeCardContent">
+            <div class="recipeTitleCard">
+              <span>title{{ recipe.title }}</span>
+            </div>
+            <div class="recipeAuthorCard">
+              <span>por {{recipe.author }}</span>
+            </div>
+            <a href="/admin/recipes/{{ recipe.id }}">Vizualizar</a>
+          </div>
+        </div>
+
+        <div class="recipeCard" id="{{ recipe.id }}">
+          <div class="recipeCardImg">
+            <div>
+              <img src="/assets/pizza.png" alt="{{ recipe.title }}">
+            </div>
+          </div>
+          
+          <div class="recipeCardContent">
+            <div class="recipeTitleCard">
+              <span>title{{ recipe.title }}</span>
+            </div>
+            <div class="recipeAuthorCard">
+              <span>por {{recipe.author }}</span>
+            </div>
+            <a href="/admin/recipes/{{ recipe.id }}">Vizualizar</a>
+          </div>
+        </div>
+
+        <div class="recipeCard" id="{{ recipe.id }}">
+          <div class="recipeCardImg">
+            <div>
+              <img src="/assets/pizza.png" alt="{{ recipe.title }}">
+            </div>
+          </div>
+          
+          <div class="recipeCardContent">
+            <div class="recipeTitleCard">
+              <span>title{{ recipe.title }}</span>
+            </div>
+            <div class="recipeAuthorCard">
+              <span>por {{recipe.author }}</span>
+            </div>
+            <a href="/admin/recipes/{{ recipe.id }}">Vizualizar</a>
+          </div>
+        </div>
+      
+    </section>
+        </div>    
+  </section>
+
+  <script src="scripts.js"></script>
+{% endblock %}

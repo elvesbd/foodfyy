@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;  
+}
+
+header {
+  margin: 0 auto;
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  padding: 32px;
+}
+
+input {
+  outline: none;
+}
+
+header .header {
+  width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 90px 300px 465px;
+  gap: 45px;
+}
+
+.logo {
+  width: 90.6px;
+  height: 26.9px;
+  color: #111;
+}
+
+.content {
+  max-width: 940px;
+  flex: 1 0 auto;
+  margin: 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  height: 62px;
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  background-color: #eee;
+  color: #999;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.title {
+  width: 940px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.title h3 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #111;
+}
+
+.title .button {
+  width: 136px;
+  height: 37px;
+  background: #6558C3;
+  border-radius: 4px;
+}
+
+.title .buttonSave {
+  width: 136px;
+  height: 37px;
+  background: #6558C3;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.title a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.recipesCard {
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.recipeCard {
+  display: flex;
+}
+
+.recipeCard img {
+  width: 172px;
+  height: 80px;
+  border-radius: 8.57px;
+}
+
+.recipeCardContent {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  margin-left: 15px;
+}
+
+.recipeTitleCard {
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #111111;
+  spacing: 21px;
+}
+
+.recipeAuthorCard {
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 5px;
+}
+
+.recipeCardContent a {
+  font-family: Roboto-Bold;
+  font-size: 14px;
+  color: #6558C3;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.recipeId {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.recipeImage img {
+  width: 940px;
+  height: 280px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.recipeTitleId {
+  margin-top: 40px;
+  font-family: Roboto-Bold;
+  font-size: 36px;
+  color: #111111;
+}
+
+.recipeAuthorId {
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  color: #777777;
+}
+
+.detailsMenu {
+  display: flex;
+  align-items: baseline;
+  margin: 25px 0;
+}
+
+.detailsInfo ul, ol{
+  list-style: none;
+}
+
+.detailsInfo {
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+.detailsInfo.hidden {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  line-height: 0;
+}
+
+.detailsMenu h2{
+  font-family: Roboto-Bold;
+  font-size: 24px;
+  color: #111;
+}
+
+.detailsMenu a {
+  font-family: Roboto-Bold;
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.detailsMenu p {
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-top: 25px;
+  text-align: justify;
+}
+
+.formCreateRecipe {
+  width: 940px;
+}
+
+.formCreateRecipe h3 {
+  margin: 30px 0 10px 0;
+}
+
+.formCreateRecipe h3 {
+  font-family: Roboto-Bold;
+  font-size: 16px;
+  color: #111;
+}
+
+.item input {
+  width: 940px;
+  height: 49px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 1px 0;
+}
+
+.buttonAdd {
+  width: 194px;
+  height: 19px;
+  display: flex;
+  margin-top: 10px;
+  font-family: Roboto-Bold;
+  font-size: 16px;
+  color: #6558C3;
+  text-align: right;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.item textarea {
+  width: 940px;
+  height: 257px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  padding: 5px;
+}
+
+.titleEdit {
+  width: 940px;
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.titleEdit a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.titleEdit .buttonDelete {
+  width: 136px;
+  height: 37px;
+  background: #DC4747;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.titleEdit .buttonSave {
+  width: 136px;
+  height: 37px;
+  background: #6558C3;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.titleEdit h3 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #111;
+}
+
+/*MENU ADM*/
+
+.cabecalho {
+  margin: 35px auto;
+  width: 940px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 91px 400px 1fr;
+  align-items: center;
+}
+
+.logo {
+  width: 90.6px;
+  height: 26.9px;
+  color: #111;
+}
+
+.optionsMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionsMenu a {
+  font-family: Roboto-Regular;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+.optionsMenu a.active {
+  font-weight: bold;
+}
+
+/*CARDS CHEFS*/
+
+.chefs {
+  width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 40px;
+}
+
+.chef {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.chef img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.chefContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.chefContent span:nth-child(1) {
+  width: 95px;
+  height: 21px;
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #111;
+}
+
+.totalRecipes {
+  width: 61px;
+  height: 16px;
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+.recipeImage img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 60px;
+}
+
